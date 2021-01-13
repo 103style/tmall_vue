@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+#app
+    margin 0 auto
+    background hotpink 
 </style>

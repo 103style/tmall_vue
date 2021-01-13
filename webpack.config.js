@@ -32,6 +32,19 @@ module.exports = {
             loader: 'babel-loader',
             exclude: /node_modules/,
         }, {
+            test: /\.styl/,
+            use: [
+                'style-loader',
+                'css-loader',
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                'stylus-loader'
+            ]
+        }, {
             // 它会应用到普通的 `.css` 文件
             // 以及 `.vue` 文件中的 `<style>` 块
             test: /\.css$/,
