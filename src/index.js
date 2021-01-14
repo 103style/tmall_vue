@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './app.vue'
 
+import './assets/styles/global.styl'
+import '../iconfont/iconfont.css'
 //创建div添加到body中
 const root = document.createElement('div')
 document.body.appendChild(root)

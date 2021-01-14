@@ -50,8 +50,12 @@ module.exports = {
             test: /\.css$/,
             use: [
                 'vue-style-loader',
+                'style-loader',
                 'css-loader'
             ]
+        }, {
+            test: /\.(woff|svg|eot|ttf)\??.*$/,
+            loader: 'url-loader?name=iconfont/[name].[md5:hash:hex:7].[ext]'
         }]
     },
     plugins: [
