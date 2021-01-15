@@ -12,11 +12,8 @@
           <a href="#">我的淘宝</a>
           <div class="memu-list">
             <ul>
-              <li>
-                <a href="#">以买到的宝贝</a>
-              </li>
-              <li>
-                <a href="#">已卖出的宝贝</a>
+              <li v-for="mineTbItem in mineTbItems">
+                <a href="#" target="_blank">{{ mineTbItem }}</a>
               </li>
             </ul>
           </div>
@@ -31,11 +28,8 @@
           <a href="#">收藏夹</a>
           <div class="memu-list">
             <ul>
-              <li>
-                <a href="#">收藏的宝贝</a>
-              </li>
-              <li>
-                <a href="#">收藏的店铺</a>
+              <li href="#" v-for="mineFavItem in mineFavItems">
+                <a href="#" target="_blank">{{ mineFavItem }}</a>
               </li>
             </ul>
           </div>
@@ -57,20 +51,16 @@
           <a href="#">商家支持</a>
           <div class="memu-list seller_support">
             <ul>
-              <li>
-                <span class="support_title">商家：</span>
+              <li v-for="sellerSupport in sellerSupport">
+                <span class="support_title">{{ sellerSupport.title }}</span>
                 <a
                   href="#"
-                  v-for="supportTitle in supportTitles"
+                  target="_blank"
+                  v-for="supportTitle in sellerSupport.items"
                   class="support_item"
                 >
                   {{ supportTitle }}
                 </a>
-              </li>
-              <li>
-                <span class="support_title">帮助：</span>
-                <a href="#" class="support_item">帮助中心</a>
-                <a href="#" class="support_item">问商友</a>
               </li>
             </ul>
           </div>
@@ -98,6 +88,7 @@
                 >
                   <a href="#" target="_blank">
                     {{ websiteNavItem.title }}
+
                     <i
                       class="icon-tip icon-tip-hot"
                       v-if="websiteNavItem.isHot"
@@ -121,15 +112,26 @@
 export default {
   data() {
     return {
-      supportTitles: [
-        "商家中心",
-        "天猫规则",
-        "商家入驻",
-        "运营服务",
-        "商家品控",
-        "商家工具",
-        "天猫智库",
-        "喵言喵语",
+      mineTbItems: ["以买到的宝贝", "已卖出的宝贝"],
+      mineFavItems: ["收藏的宝贝", "收藏的店铺"],
+      sellerSupport: [
+        {
+          title: "商家：",
+          items: [
+            "商家中心",
+            "天猫规则",
+            "商家入驻",
+            "运营服务",
+            "商家品控",
+            "商家工具",
+            "天猫智库",
+            "喵言喵语",
+          ],
+        },
+        {
+          title: "帮助：",
+          items: ["帮助中心", "问商友"],
+        },
       ],
       websiteNavs: [
         {
