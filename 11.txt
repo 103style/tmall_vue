@@ -1,33 +1,6 @@
-<template>
-  <div id="category_list">
-    <ul class="categorys">
-      <li
-        v-for="(item, index) in items"
-        class="category_list_item"
-        v-bind:class="colorClass[index % colorClass.length]"
-        v-on:mouseenter="changeHotWord(index)"
-      >
-        <span class="iconfont">{{ item.iconDes }}</span>
-        <a
-          v-bind:href="'#' + title"
-          target="_blank"
-          v-for="(title, index) in item.titles"
-        >
-          {{ index != 0 ? "/" : "" }}{{ title }}
-        </a>
-      </li>
-    </ul>
-
-    <HotWord class="category_detail" :hotitem="hotWordItem"></HotWord>
-  </div>
-</template>
-
 <script>
 import HotWord from "./hotword.vue";
 export default {
-  components: {
-    HotWord,
-  },
   data() {
     //iconfont字符修正 在WPF中字体图标"&#xe522;"通过字段绑定需要写为"\ue522"，否在只显示字符串
     return {
@@ -66,13 +39,6 @@ export default {
         { titles: ["医药保健"], iconDes: "\u3460" },
         { titles: ["厨具", "收纳", "宠物"], iconDes: "\u345f" },
         { titles: ["图书音像"], iconDes: "\u3461" },
-      ],
-      colorClass: [
-        "colore54077",
-        "color6347ed",
-        "color427def",
-        "colorf7a831",
-        "color3bc7b0",
       ],
       hotWords: [
         // 女装 /内衣
@@ -2419,98 +2385,6 @@ export default {
       ],
       hotWordItem: null,
     };
-  },
-  methods: {
-    changeHotWord(index) {
-      this.hotWordItem = this.hotWords[index];
-    },
-  },
+  }
 };
 </script>
-
-<style lang="stylus" scoped>
-#category_list:hover .category_detail {
-  visibility: visible;
-}
-
-#category_list {
-  position: relative;
-
-  .category_detail {
-    visibility: hidden;
-    position: absolute;
-    width: 852px;
-    height: 500px;
-    left: 200px;
-    background-color: #fff;
-  }
-
-  .categorys {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.55);
-    width: 200px;
-    height: 500px;
-    z-index: 11;
-
-    .category_list_item {
-      height: 31.2px;
-      color: #fff;
-
-      a {
-        height: 31px;
-        line-height: 31px;
-        color: #fff;
-        font-size: 14px;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-
-      span {
-        margin-left: 14px;
-        margin-right: 4px;
-        height: 31px;
-        color: #fff;
-        opacity: 0.5;
-        display: inline-block;
-        line-height: 31px;
-        vertical-align: middle;
-        font-size: 16px;
-      }
-    }
-
-    li:hover {
-      background: #fff;
-    }
-
-    li:hover span {
-      color: red;
-      opacity: 1;
-    }
-
-    li:hover a {
-      color: red;
-      font-weight: 700;
-    }
-
-    .colore54077:hover a {
-      color: #e54077 !important;
-    }
-
-    .color6347ed:hover a {
-      color: #6347ed !important;
-    }
-
-    .color427def:hover a {
-      color: #427def !important;
-    }
-
-    .colorf7a831:hover a {
-      color: #f7a831 !important;
-    }
-
-    .color3bc7b0:hover a {
-      color: #3bc7b0 !important;
-    }
-  }
-}
-</style>
