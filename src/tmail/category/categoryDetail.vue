@@ -1,17 +1,23 @@
+// 每个商品分类的详情页
 <template>
-  <div id="hotItem">
-    <div v-for="items in hotitem" class="itemBox">
-      <div v-for="item in items" class="hot_word_line">
+  <div id="categoryDetail">
+    <div v-for="hotWordItems in categoryDetail" class="itemBox">
+      <div v-for="(hotWordItem, index) in hotWordItems" class="hot_word_line">
         <div class="line_title">
           <a href="#" class="hot_word_title">
-            {{ item.title }}
+            {{ hotWordItem.title }}
           </a>
         </div>
         <div class="line_items">
-          <a href="#" class="hot_word" target="_blank" v-for="t in item.items">
-            {{ t.name }}
+          <a
+            href="#"
+            class="hot_word"
+            target="_blank"
+            v-for="item in hotWordItem.items"
+          >
+            {{ item.name }}
           </a>
-          <div class="line_seprate"></div>
+          <div class="line_seprate" v-if="index !=hotWordItems.length - 1"></div>
         </div>
       </div>
     </div>
@@ -21,7 +27,7 @@
 <script>
 export default {
   props: {
-    hotitem: {
+    categoryDetail: {
       type: Object,
       require: true,
     },
@@ -30,7 +36,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#hotItem {
+#categoryDetail {
   .itemBox {
     float: left;
     width: 583px;

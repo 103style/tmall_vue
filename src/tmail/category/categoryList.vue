@@ -1,3 +1,4 @@
+// 商品分类的列表
 <template>
   <div id="category_list">
     <ul class="categorys">
@@ -5,7 +6,7 @@
         v-for="(item, index) in items"
         class="category_list_item"
         v-bind:class="colorClass[index % colorClass.length]"
-        v-on:mouseenter="changeHotWord(index)"
+        v-on:mouseenter="changeCategoryIndex(index)"
       >
         <span class="iconfont">{{ item.iconDes }}</span>
         <a
@@ -18,15 +19,18 @@
       </li>
     </ul>
 
-    <HotWord class="category_detail" :hotitem="hotWordItem"></HotWord>
+    <CategoryDetail
+      class="category_detail"
+      :categoryDetail="categoryDetail"
+    ></CategoryDetail>
   </div>
 </template>
 
 <script>
-import HotWord from "./hotword.vue";
+import CategoryDetail from "./categoryDetail.vue";
 export default {
   components: {
-    HotWord,
+    CategoryDetail,
   },
   data() {
     //iconfont字符修正 在WPF中字体图标"&#xe522;"通过字段绑定需要写为"\ue522"，否在只显示字符串
@@ -74,10 +78,10 @@ export default {
         "colorf7a831",
         "color3bc7b0",
       ],
-      hotWords: [
+      categoryDetails: [
         // 女装 /内衣
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "当季流行",
               items: [
@@ -201,7 +205,7 @@ export default {
         },
         // 男装 /运动户外
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "当季流行",
               items: [
@@ -329,7 +333,7 @@ export default {
         },
         // 女鞋 /男鞋 /箱包
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "推荐女鞋",
               items: [
@@ -444,7 +448,7 @@ export default {
         },
         // 美妆 /个人护理
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "护肤品",
               items: [
@@ -579,7 +583,7 @@ export default {
         },
         // 腕表 /眼镜 /珠宝饰品
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "黄金首饰",
               items: [
@@ -732,7 +736,7 @@ export default {
         },
         // 手机 /数码 /电脑办公
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "热门手机",
               items: [
@@ -884,7 +888,7 @@ export default {
         },
         // 母婴玩具
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "童装",
               items: [
@@ -1048,7 +1052,7 @@ export default {
         },
         // 零食 /茶酒 /进口食品
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "进口食品",
               items: [
@@ -1192,7 +1196,7 @@ export default {
         },
         // 生鲜水果
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "新鲜蔬菜",
               items: [
@@ -1369,7 +1373,7 @@ export default {
         },
         // 大家电 /生活电器
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "平板电视",
               items: [
@@ -1526,7 +1530,7 @@ export default {
         },
         // 家具建材
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "成套家具",
               items: [
@@ -1675,7 +1679,7 @@ export default {
         },
         // 汽车 /配件 /用品
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "整车",
               items: [
@@ -1808,7 +1812,7 @@ export default {
         },
         // 家纺 /家饰 /鲜花
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "当季热卖",
               items: [
@@ -1951,7 +1955,7 @@ export default {
         },
         // 医药保健
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "保健品",
               items: [
@@ -2118,7 +2122,7 @@ export default {
         },
         // 厨具 /收纳 /宠物
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "厨房烹饪",
               items: [
@@ -2273,7 +2277,7 @@ export default {
         },
         // 图书音像
         {
-          hotitems: [
+          categoryDetail: [
             {
               title: "儿童读物",
               items: [
@@ -2417,12 +2421,12 @@ export default {
           ],
         },
       ],
-      hotWordItem: null,
+      categoryDetail: null,
     };
   },
   methods: {
-    changeHotWord(index) {
-      this.hotWordItem = this.hotWords[index];
+    changeCategoryIndex(index) {
+      this.categoryDetail = this.categoryDetails[index];
     },
   },
 };

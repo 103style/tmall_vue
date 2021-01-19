@@ -1,3 +1,4 @@
+// 分类的布局 包括 logo 分类标题 和 对应的分类item
 <template>
   <div id="category-box">
     <div class="logobox">
