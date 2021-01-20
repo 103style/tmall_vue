@@ -15,3 +15,8 @@ export default {
   },
 };
 </script>
+
+<style lang="stylus" scoped>
+#content {
+}
+</style>
