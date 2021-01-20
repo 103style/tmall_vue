@@ -1,8 +1,11 @@
 // 每个商品分类的详情页
 <template>
   <div id="categoryDetail">
-    <div v-for="hotWordItems in categoryDetail" class="itemBox">
-      <div v-for="(hotWordItem, index) in hotWordItems" class="hot_word_line">
+    <div class="itemBox">
+      <div
+        v-for="(hotWordItem, x) in categoryDetail.detail"
+        class="hot_word_line"
+      >
         <div class="line_title">
           <a href="#" class="hot_word_title">
             {{ hotWordItem.title }}
@@ -10,16 +13,33 @@
         </div>
         <div class="line_items">
           <a
-            href="#"
+            :href="'#' + item.name"
             class="hot_word"
+            :style="changeStyle(item.isHot, categoryDetail.hoverColor, x, y)"
+            @mouseover="itemHover(x, y)"
+            @mouseout="removeHover"
             target="_blank"
-            v-for="item in hotWordItem.items"
+            v-for="(item, y) in hotWordItem.items"
           >
             {{ item.name }}
           </a>
-          <div class="line_seprate" v-if="index !=hotWordItems.length - 1"></div>
+          <div
+            class="line_seprate"
+            v-if="x != categoryDetail.detail.length - 1"
+          ></div>
         </div>
       </div>
+    </div>
+
+    <div class="hotBrandBox">
+      <a
+        class="brandItem"
+        href="#"
+        target="_blank"
+        v-for="brand in categoryDetail.hotBrands"
+      >
+        <img class="brandImg" v-bind:src="brand" alt="" />
+      </a>
     </div>
   </div>
 </template>
@@ -30,6 +50,29 @@ export default {
     categoryDetail: {
       type: Object,
       require: true,
+    },
+  },
+  data() {
+    return { isHover: false, hoverIndex: -1 };
+  },
+  computed: {
+    changeStyle() {
+      return function (isHot, hoverColor, x, y) {
+        return isHot || (this.isHover && x == this.hoverX && y == this.hoverY)
+          ? "color:" + hoverColor + "!important"
+          : "color:#666!important";
+      };
+    },
+  },
+  methods: {
+    itemHover(x, y) {
+      this.isHover = true;
+      this.hoverX = x;
+      this.hoverY = y;
+    },
+    removeHover() {
+      this.isHover = false;
+      this.hoverX = this.hoverY = -1;
     },
   },
 };
@@ -98,6 +141,31 @@ export default {
         height: 10.5px;
         clear: both;
         zoom: 1;
+      }
+    }
+  }
+
+  .hotBrandBox {
+    float: left;
+    background-color: #FAFAFA;
+    width: 189px;
+    padding: 10px;
+    height: 480px;
+
+    .brandItem {
+      float: left;
+      width: 73px;
+      margin-right: 1px;
+      margin-bottom: 1px;
+      height: 37px;
+      padding: 5px 10px;
+      overflow: hidden;
+      background-color: #fff;
+
+      .brandImg {
+        width: 73px;
+        display: block;
+        margin: 0 auto;
       }
     }
   }
