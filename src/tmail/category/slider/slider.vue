@@ -8,7 +8,7 @@
       <SliderItem
         v-for="(sliderContent, index) in sliderContents"
         :sliderInfo="sliderContent"
-        v-if="index == curIndex"
+        :class="[index == curIndex ? 'block' : 'none']"
       ></SliderItem>
     </div>
 

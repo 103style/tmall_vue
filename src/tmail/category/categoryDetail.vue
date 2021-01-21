@@ -7,9 +7,9 @@
         class="hot_word_line"
       >
         <div class="line_title">
-          <a href="#" class="hot_word_title">
+          <span class="hot_word_title">
             {{ hotWordItem.title }}
-          </a>
+          </span>
         </div>
         <div class="line_items">
           <a
