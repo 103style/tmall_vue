@@ -25,7 +25,7 @@
           </a>
           <div
             class="line_seprate"
-            v-if="x != categoryDetail.detail.length - 1"
+            :class="{ none: x == categoryDetail.detail.length - 1 }"
           ></div>
         </div>
       </div>

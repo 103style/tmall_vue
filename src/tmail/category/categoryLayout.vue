@@ -6,11 +6,11 @@
         <img v-bind:src="logoSrc" />
       </a>
     </div>
-    <div class="category_type" v-if="!showFestival">
+    <div class="category_type" :class="{ none: showFestival }">
       <span class="iconfont">&#58911;</span>
       <div class="category_type_text">{{ categoryTitle }}</div>
     </div>
-    <div class="category_type" v-if="showFestival">
+    <div class="category_type" :class="{ none: !showFestival }">
       <div
         class="category_type_item"
         @mouseover="updateSelectIndex(0)"
@@ -26,9 +26,9 @@
         {{ festivalTitle }}
       </div>
     </div>
-    <CategoryList :class="[selectIndex == 0 ? 'block' : 'none']"></CategoryList>
+    <CategoryList :class="{ none: selectIndex != 0 }"></CategoryList>
     <FestivalList
-      :class="[selectIndex == 1 ? 'block' : 'none']"
+      :class="{ none: selectIndex != 1 }"
       :festivalList="festivalList"
     ></FestivalList>
   </div>
