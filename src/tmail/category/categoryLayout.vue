@@ -38,6 +38,12 @@
 import CategoryList from "./categoryList.vue";
 import FestivalList from "./festivalList.vue";
 export default {
+  props: {
+    showFestival: {
+      type: Boolean,
+      default: false,
+    },
+  },
   components: {
     CategoryList,
     FestivalList,
@@ -49,7 +55,6 @@ export default {
   },
   data() {
     return {
-      showFestival: true,
       selectIndex: 0,
       categoryTitle: "商品分类",
       festivalTitle: "年货节",
