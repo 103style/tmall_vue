@@ -316,7 +316,7 @@ export default {
           width: 175px;
           height: 175px;
           margin: 5px 0 0;
-          background: url('https://img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png') 0 0 no-repeat;
+          background: url('//img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png') 0 0 no-repeat;
         }
 
         .qrCodeDes {
@@ -324,7 +324,7 @@ export default {
           line-height: 35px;
           width: 145px;
           height: 35px;
-          background: url('https://img.alicdn.com/tfs/TB1W.19bG67gK0jSZFHXXa9jVXa-145-30.jpg') center bottom no-repeat;
+          background: url('//img.alicdn.com/tfs/TB1W.19bG67gK0jSZFHXXa9jVXa-145-30.jpg') center bottom no-repeat;
         }
 
         .boader {
@@ -414,7 +414,7 @@ export default {
             line-height: 0;
             font-size: 0;
             overflow: hidden;
-            background: url('https://img.alicdn.com/tps/i1/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png') -9999px -9999px no-repeat;
+            background: url('//img.alicdn.com/tps/i1/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png') -9999px -9999px no-repeat;
           }
 
           .iconTipHot {

@@ -19,11 +19,11 @@ export default {
       Tabs: [
         {
           imgUrl:
-            "https://img.alicdn.com/tfs/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png",
+            "//img.alicdn.com/tfs/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png",
         },
         {
           imgUrl:
-            "https://img.alicdn.com/tfs/TB1t5ObaBxRMKJjy0FdXXaifFXa-200-60.png",
+            "//img.alicdn.com/tfs/TB1t5ObaBxRMKJjy0FdXXaifFXa-200-60.png",
         },
         { title: "天猫会员" },
         { title: "电器城" },

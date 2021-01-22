@@ -37,16 +37,12 @@
 <script>
 import CategoryList from "./CategoryList.vue";
 import FestivalList from "./FestivalList.vue";
+import FestivalTopBox from "../FestivalTopBox.vue";
 export default {
-  props: {
-    showFestival: {
-      type: Boolean,
-      default: false,
-    },
-  },
   components: {
     CategoryList,
     FestivalList,
+    FestivalTopBox,
   },
   methods: {
     updateSelectIndex(index) {
@@ -55,11 +51,12 @@ export default {
   },
   data() {
     return {
+      showFestival: FestivalTopBox.data().showFestival,
       selectIndex: 0,
       categoryTitle: "商品分类",
       festivalTitle: "年货节",
       logoSrc:
-        "https://img.alicdn.com/tps/i4/i3/6000000001874/O1CN01Iy8Bpy1PiKsWyMkES_!!6000000001874-1-ald.gif",
+        "//img.alicdn.com/tps/i4/i3/6000000001874/O1CN01Iy8Bpy1PiKsWyMkES_!!6000000001874-1-ald.gif",
       festivalList: [
         { title: "大牌女装", iconDes: "\u3459" },
         { title: "大牌男装", iconDes: "\u346c" },

@@ -1,8 +1,7 @@
 //商品分类 和 轮播图
 <template>
   <div id="categoryBox">
-    <!-- TODO -->
-    <CategoryLayout :showFestival="true"></CategoryLayout>
+    <CategoryLayout></CategoryLayout>
     <SliderBox></SliderBox>
   </div>
 </template>

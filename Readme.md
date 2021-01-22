@@ -9,5 +9,6 @@
 
 
 ## 参考
+* [Vue Style Guide](https://vuejs.org/v2/style-guide/index.html)
 * [vue-loader](https://vue-loader.vuejs.org/zh/)
 * [webpack-dev-server](https://webpack.docschina.org/configuration/dev-server/)
