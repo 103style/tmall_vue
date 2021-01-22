@@ -1,14 +1,14 @@
+<!-- 标题布局 -->
 <template>
-  <div id="floorItem">
+  <div id="floorItemTitle">
     <div class="titleLayout">
       <div class="imgTitleLayout" v-if="floorItemData.imageUrl">
-        <img :src="floorItemData.imageUrl" alt="" />
+        <img class="imgTitle" :src="floorItemData.imageUrl" alt="" />
       </div>
-      <div class="textTitleLayout" v-if="!floorItemData.imageUrl">
+      <div class="textTitleLayout" v-if="floorItemData.title">
+        <!-- // TODO -->
         <!-- 元素之间换行 inline-block 会增加间隙 -->
-        <i class="titleMark"></i>
-        <div class="floorTitle">{{ floorItemData.title }}</div>
-        <div class="floorSubname">{{ floorItemData.subTitle }}</div>
+        <i class="titleMark"></i><div class="floorTitle">{{ floorItemData.title }}</div><div class="floorSubname">{{ floorItemData.subTitle }}</div>
       </div>
     </div>
   </div>
@@ -26,12 +26,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#floorItem {
-  margin-top: 20px;
-  width: 100%;
-  height: 665px;
-  position: relative;
-
+#floorItemTitle {
   .titleLayout {
     font-size: 18px;
     color: #000;
@@ -41,7 +36,7 @@ export default {
       color: #000;
       height: 100%;
 
-      img {
+      .imgTitle {
         vertical-align: middle;
         width: 214px;
         height: 25px;
