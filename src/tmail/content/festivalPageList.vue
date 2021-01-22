@@ -1,53 +1,55 @@
 <template>
   <div id="festivalPageList">
-    <a
-      href="#"
-      target="_blank"
-      class="pageTitle"
-      :style="
-        'background: url(' +
-        titleBg +
-        ') center no-repeat;background-size: 300px 65px;'
-      "
-    ></a>
-    <div class="groupWrapper" v-for="saleItem in sales">
+    <div class="pageBox">
       <a
-        class="groupItem leftPage"
+        href="#"
+        target="_blank"
+        class="pageTitle"
         :style="
-          'color:' +
-          saleItem.left.color +
-          ';background: url(' +
-          saleItem.left.bgImg +
-          ');'
+          'background: url(' +
+          titleBg +
+          ') center no-repeat;background-size: 300px 65px;'
         "
-      >
-        <em class="pageName">{{ saleItem.left.title }}</em>
-
-        <div class="leftSubTitle">
-          {{ saleItem.left.subTitle }}
-        </div>
-
-        <img :src="saleItem.left.cover" alt="" class="leftCover" />
-      </a>
-      <div class="groupItem">
+      ></a>
+      <div class="groupWrapper" v-for="saleItem in sales">
         <a
-          class="rightPage"
-          v-for="rightItem in saleItem.items"
+          class="groupItem leftPage"
           :style="
             'color:' +
-            rightItem.color +
+            saleItem.left.color +
             ';background: url(' +
-            rightItem.bgImg +
+            saleItem.left.bgImg +
             ');'
           "
         >
-          <em class="rightPageName">{{ rightItem.title }}</em>
-          <div class="subTitleBox">
-            <span>{{ rightItem.subTitle }}</span>
+          <em class="pageName">{{ saleItem.left.title }}</em>
+
+          <div class="leftSubTitle">
+            {{ saleItem.left.subTitle }}
           </div>
 
-          <img class="rightCover" :src="rightItem.cover" alt="" />
+          <img :src="saleItem.left.cover" alt="" class="leftCover" />
         </a>
+        <div class="groupItem">
+          <a
+            class="rightPage"
+            v-for="rightItem in saleItem.items"
+            :style="
+              'color:' +
+              rightItem.color +
+              ';background: url(' +
+              rightItem.bgImg +
+              ');'
+            "
+          >
+            <em class="rightPageName">{{ rightItem.title }}</em>
+            <div class="subTitleBox">
+              <span>{{ rightItem.subTitle }}</span>
+            </div>
+
+            <img class="rightCover" :src="rightItem.cover" alt="" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -131,8 +133,14 @@ export default {
 
 <style lang="stylus" scoped>
 #festivalPageList {
-  width: 1240px;
-  height: 435px;
+  margin: auto;
+  width: 1230px;
+  padding-right: 30px;
+
+  .pageBox {
+    width: 1240px;
+    height: 435px;
+  }
 
   .pageTitle {
     height: 105px;
