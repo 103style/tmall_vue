@@ -24,5 +24,6 @@ export default {
 
 <style lang="stylus" scoped>
 #app {
+  font-family: 'Microsoft YaHei', SimSun, '\5b8b\4f53', sans-serif;
 }
 </style>
