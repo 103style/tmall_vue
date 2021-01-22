@@ -1,11 +1,11 @@
 // 头部的搜索框
 <template>
-  <div id="headerbox">
+  <div id="headerSearchBox">
     <div class="headerLayout">
       <div class="searchBox">
         <input
           type="text"
-          class="search_input"
+          class="searchInput"
           id="mq"
           v-on:focus="searchFocused"
           v-on:input="onSearchInput"
@@ -14,13 +14,11 @@
         <label
           for="mq"
           v-if="!inputing"
-          v-bind:class="[
-            'search_lable',
-            inputFoucsed ? 'search_lable_lose' : '',
-          ]"
-          >搜索 天猫 商品/品牌/店铺</label
+          v-bind:class="['searchLable', inputFoucsed ? 'searchLableLose' : '']"
         >
-        <button class="search_bt">搜索</button>
+          搜索 天猫 商品/品牌/店铺
+        </label>
+        <button class="searchBtn">搜索</button>
       </div>
     </div>
   </div>
@@ -51,7 +49,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#headerbox {
+#headerSearchBox {
   margin-bottom: 0;
   min-width: 990px;
   background: #fff;
@@ -72,7 +70,7 @@ export default {
       border: solid red;
       border-width: 2px 0 2px 2px;
 
-      .search_input {
+      .searchInput {
         width: 100%;
         padding: 5px 137px 5px 5px;
         height: 36px;
@@ -85,7 +83,7 @@ export default {
         background: 0 0;
       }
 
-      .search_lable {
+      .searchLable {
         font: 14px tahoma, arial, '\5b8b\4f53';
         vertical-align: middle;
         position: absolute;
@@ -100,11 +98,11 @@ export default {
         left: 8px;
       }
 
-      .search_lable_lose {
+      .searchLableLose {
         color: rgb(204, 204, 204);
       }
 
-      .search_bt {
+      .searchBtn {
         position: absolute;
         right: 0;
         width: 132px;

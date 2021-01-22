@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './app.vue'
+import App from './App.vue'
 
 import './assets/styles/global.styl'
 import '../iconfont/iconfont.css'

@@ -1,6 +1,6 @@
 <template>
-  <div id="nav_top_site">
-    <div class="nav_top_site_box">
+  <div id="navTopSite">
+    <div class="navTopSiteBox">
       <div class="left">
         <span>喵，欢迎来天猫</span>
         <a href="#" style="padding: 0 5px 0 15px">请登录</a>
@@ -10,7 +10,7 @@
       <ul class="right">
         <li class="item hoverwhite">
           <a href="#">我的淘宝</a>
-          <div class="memu-list">
+          <div class="memuList">
             <ul>
               <li v-for="mineTbItem in mineTbItems">
                 <a href="#" target="_blank">{{ mineTbItem }}</a>
@@ -26,7 +26,7 @@
         </li>
         <li class="item hoverwhite">
           <a href="#">收藏夹</a>
-          <div class="memu-list">
+          <div class="memuList">
             <ul>
               <li href="#" v-for="mineFavItem in mineFavItems">
                 <a href="#" target="_blank">{{ mineFavItem }}</a>
@@ -40,24 +40,24 @@
             <span class="iconfont iconfontspan">&#xe622;</span>
             手机版
           </a>
-          <div class="memu-list phone_qr_box">
-            <div class="qr_code"></div>
-            <div class="qr_code_des"></div>
+          <div class="memuList phoneQrBox">
+            <div class="qrCode"></div>
+            <div class="qrCodeDes"></div>
             <b class="boader"></b>
           </div>
         </li>
         <li class="item"><a href="#">淘宝网</a></li>
         <li class="item hoverwhite">
           <a href="#">商家支持</a>
-          <div class="memu-list seller_support">
+          <div class="memuList sellerSupport">
             <ul>
               <li v-for="sellerSupport in sellerSupport">
-                <span class="support_title">{{ sellerSupport.title }}</span>
+                <span class="supportTitle">{{ sellerSupport.title }}</span>
                 <a
                   href="#"
                   target="_blank"
                   v-for="supportTitle in sellerSupport.items"
-                  class="support_item"
+                  class="supportItem"
                 >
                   {{ supportTitle }}
                 </a>
@@ -70,31 +70,31 @@
             <span class="iconfont iconfontspan">&#58911;</span>
             网站导航
           </a>
-          <div class="memu-list website_nav">
+          <div class="memuList websiteNav">
             <div
               v-for="websiteNav in websiteNavs"
               v-bind:class="[
-                'site-cont',
-                websiteNav.isHot ? 'site-hot' : '',
-                websiteNav.isMarket ? 'site-market' : '',
-                websiteNav.isHelper ? 'site-help' : '',
+                'siteContent',
+                websiteNav.isHot ? 'siteHot' : '',
+                websiteNav.isMarket ? 'siteMarket' : '',
+                websiteNav.isHelper ? 'siteHelp' : '',
               ]"
             >
-              <span class="site_title">{{ websiteNav.title }}</span>
-              <ul class="site-list">
+              <span class="siteTitle">{{ websiteNav.title }}</span>
+              <ul class="siteList">
                 <li
-                  class="site-list-item"
+                  class="siteListItem"
                   v-for="websiteNavItem in websiteNav.items"
                 >
                   <a href="#" target="_blank">
                     {{ websiteNavItem.title }}
 
                     <i
-                      class="icon-tip icon-tip-hot"
+                      class="iconTip iconTipHot"
                       v-if="websiteNavItem.isHot"
                     ></i>
                     <i
-                      class="icon-tip icon-tip-new"
+                      class="iconTip iconTipNew"
                       v-if="websiteNavItem.isNew"
                     ></i>
                   </a>
@@ -193,7 +193,7 @@ export default {
 </script>
 
 <style lang="stylus">
-#nav_top_site {
+#navTopSite {
   background: #f2f2f2;
   height: 32px;
   font-family: 'Microsoft YaHei', tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
@@ -201,7 +201,7 @@ export default {
   position: relative !important;
   border-bottom: 1px solid #e5e5e5;
 
-  .nav_top_site_box {
+  .navTopSiteBox {
     width: 1230px;
     margin: 0 auto;
     position: relative;
@@ -284,7 +284,7 @@ export default {
         margin: 0 2px 0 5px;
       }
 
-      .memu-list {
+      .memuList {
         visibility: hidden;
         display: block;
         background: white;
@@ -303,7 +303,7 @@ export default {
         }
       }
 
-      .phone_qr_box {
+      .phoneQrBox {
         padding: 0;
         position: absolute;
         width: 175px;
@@ -312,14 +312,14 @@ export default {
         top: 26px;
         box-shadow: 0 0 5px #aaa;
 
-        .qr_code {
+        .qrCode {
           width: 175px;
           height: 175px;
           margin: 5px 0 0;
           background: url('https://img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png') 0 0 no-repeat;
         }
 
-        .qr_code_des {
+        .qrCodeDes {
           margin: 0 15px;
           line-height: 35px;
           width: 145px;
@@ -342,7 +342,7 @@ export default {
         }
       }
 
-      .seller_support {
+      .sellerSupport {
         width: 122px;
         overflow: hidden;
         right: 0;
@@ -363,7 +363,7 @@ export default {
           margin-right: -20px;
           border-bottom: 1px dotted #827777;
 
-          .support_title {
+          .supportTitle {
             display: block;
             font-size: 12px;
             line-height: 16px;
@@ -371,7 +371,7 @@ export default {
             font-weight: 700;
           }
 
-          .support_item {
+          .supportItem {
             display: inline-block;
             width: 48px;
             margin-right: 20px;
@@ -379,13 +379,13 @@ export default {
             color: #666;
           }
 
-          .support_item:hover {
+          .supportItem:hover {
             color: #FF0036;
           }
         }
       }
 
-      .website_nav {
+      .websiteNav {
         right: 0;
         width: 1198px;
         border-width: 0 1px 1px;
@@ -401,13 +401,13 @@ export default {
           color: #FF0036;
         }
 
-        .site-cont {
+        .siteContent {
           height: 110px;
           display: inline-block;
           padding-left: 30px;
           overflow: hidden;
 
-          .icon-tip {
+          .iconTip {
             position: absolute;
             width: 9px;
             height: 11px;
@@ -417,34 +417,34 @@ export default {
             background: url('https://img.alicdn.com/tps/i1/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png') -9999px -9999px no-repeat;
           }
 
-          .icon-tip-hot {
+          .iconTipHot {
             background-position: -37px 0;
           }
 
-          .icon-tip-new {
+          .iconTipNew {
             background-position: -37px -11px;
           }
         }
 
-        .site-hot {
+        .siteHot {
           width: 455px;
 
-          .site_title {
+          .siteTitle {
             color: #f56a00;
           }
         }
 
-        .site-market {
+        .siteMarket {
           width: 455px;
           border-left: 1px solid #f5f5f5;
           border-right: 1px solid #f5f5f5;
 
-          .site_title {
+          .siteTitle {
             color: #2263d4;
           }
         }
 
-        .site-help {
+        .siteHelp {
           width: 226px;
 
           a:hover {
@@ -452,18 +452,18 @@ export default {
           }
         }
 
-        .site_title {
+        .siteTitle {
           font-size: 16px;
           padding-bottom: 8px;
           color: #666;
           font-family: '\5FAE\8F6F\96C5\9ED1', arial, '\5b8b\4f53';
         }
 
-        .site-list {
+        .siteList {
           margin-right: -20px;
           overflow: hidden;
 
-          .site-list-item {
+          .siteListItem {
             position: relative;
             width: 95px;
             float: left;
@@ -480,7 +480,7 @@ export default {
         font-weight: bold;
       }
 
-      .item:hover .memu-list {
+      .item:hover .memuList {
         visibility: visible;
       }
     }

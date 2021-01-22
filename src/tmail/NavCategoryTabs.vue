@@ -1,7 +1,7 @@
 //头部的 天猫会员 电器城 等 这些tabs
 <template>
-  <div id="main_nav">
-    <div class="tab_box">
+  <div id="navCategoryTabs">
+    <div class="tabBox">
       <div class="tabs">
         <a href="#" target="_blank" v-for="tab in Tabs">
           <img v-bind:src="tab.imgUrl" v-if="tab.imgUrl" />
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#main_nav {
+#navCategoryTabs {
   white-space: nowrap;
   position: relative;
   font-size: 0;
@@ -51,7 +51,7 @@ export default {
   border-width: 0 0 1.5px;
   border-color: #FF0036;
 
-  .tab_box {
+  .tabBox {
     width: 1230px;
     margin: 0 auto;
     height: 35px;

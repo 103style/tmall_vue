@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import SliderItem from "./slider_item.vue";
+import SliderItem from "./SliderItem.vue";
 export default {
   components: {
     SliderItem,

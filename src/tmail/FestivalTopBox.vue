@@ -1,6 +1,6 @@
 <template>
   <!-- 节日促销的宣传图 -->
-  <div class="festivalBox" :class="{ none: !showFestival }">
+  <div class="festivalTopBox" :class="{ none: !showFestival }">
     <a href="#" target="_blank" class="festivalWrapper">
       <img
         :src="festivalImg"
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.festivalBox {
+.festivalTopBox {
   position: relative;
   width: 100%;
   height: 80px;

@@ -1,6 +1,6 @@
 <template>
-  <div id="content">
-    <NavTabs></NavTabs>
+  <div id="contentBox">
+    <NavCategoryTabs></NavCategoryTabs>
     <CategoryBox></CategoryBox>
     <FestivalPageList></FestivalPageList>
     <BrandList></BrandList>
@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import NavTabs from "./nav_tabs.vue";
-import CategoryBox from "./categoryBox.vue";
-import FestivalPageList from "./content/festivalPageList.vue";
-import BrandList from "./content/brandList.vue";
+import NavCategoryTabs from "./NavCategoryTabs.vue";
+import CategoryBox from "./CategoryBox.vue";
+import FestivalPageList from "./content/FestivalPageList.vue";
+import BrandList from "./content/BrandList.vue";
 export default {
   components: {
-    NavTabs,
+    NavCategoryTabs,
     CategoryBox,
     FestivalPageList,
     BrandList,
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#content {
+#contentBox {
   background-image: url('//img.alicdn.com/imgextra/i4/O1CN012KZjVO24U2liLOBDh_!!6000000007393-2-tps-1702-1356.png');
   background-repeat: no-repeat;
   background-position: center -170px;
