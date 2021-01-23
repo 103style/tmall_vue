@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <FestivalTopBox></FestivalTopBox>
-    <NavTopSite></NavTopSite>
-    <HeaderSearchBox></HeaderSearchBox>
-    <ContentBox></ContentBox>
+    <FestivalTopBox />
+    <NavTopSite />
+    <HeaderSearchBox />
+    <ContentBox />
+    <FooterBox />
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import FestivalTopBox from "./tmail/FestivalTopBox.vue";
 import NavTopSite from "./tmail/NavTopSite.vue";
 import HeaderSearchBox from "./tmail/HeaderSearchBox.vue";
 import ContentBox from "./tmail/ContentBox.vue";
+import FooterBox from "./tmail/FooterBox.vue";
 export default {
   components: {
     FestivalTopBox,
     NavTopSite,
     HeaderSearchBox,
     ContentBox,
+    FooterBox,
   },
 };
 </script>

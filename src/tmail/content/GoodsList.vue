@@ -22,6 +22,10 @@
         </div>
       </a>
     </div>
+
+    <div class="goodsListEndBox">
+      <div class="goodsListEnd"></div>
+    </div>
   </div>
 </template>
 
@@ -741,4 +745,22 @@ export default {
     }
   }
 }
+
+.goodsListEndBox {
+  width: 100%;
+  float: left;
+
+  .goodsListEnd {
+    position: relative;
+    content: '\20';
+    text-align: center;
+    width: 80px;
+    height: 45px;
+    margin: 0 auto 10px;
+    background: url('//img.alicdn.com/tps/TB1wQDAPXXXXXXgaFXXXXXXXXXX-62-35.png') no-repeat;
+    background-size: cover;
+  }
+}
 </style>
+
+// background-size  位于 background 之上, background-size 将会失效!!!
