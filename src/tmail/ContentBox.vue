@@ -1,10 +1,11 @@
 <template>
   <div id="contentBox">
-    <NavCategoryTabs></NavCategoryTabs>
-    <CategoryBox></CategoryBox>
-    <FestivalPageList></FestivalPageList>
-    <BrandList></BrandList>
-    <FloorList></FloorList>
+    <NavCategoryTabs />
+    <CategoryBox />
+    <FestivalPageList />
+    <BrandList />
+    <FloorList />
+    <GoodsList />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import CategoryBox from "./CategoryBox.vue";
 import FestivalPageList from "./content/FestivalPageList.vue";
 import BrandList from "./content/BrandList.vue";
 import FloorList from "./content/FloorList.vue";
+import GoodsList from "./content/GoodsList.vue";
 export default {
   components: {
     NavCategoryTabs,
@@ -21,6 +23,7 @@ export default {
     FestivalPageList,
     BrandList,
     FloorList,
+    GoodsList,
   },
 };
 </script>
