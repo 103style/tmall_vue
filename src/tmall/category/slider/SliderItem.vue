@@ -8,8 +8,13 @@
       </b>
     </a>
     <div class="sliderFloors">
-      <a class="floorLink" :href="floor.url" v-for="floor in sliderInfo.floors">
-        <img :src="floor.img" alt="" width="100%" />
+      <a
+        class="floorLink"
+        :href="'#' + index"
+        target="_blank"
+        v-for="(floor, index) in sliderInfo.floors"
+      >
+        <img :src="floor" alt="" width="100%" />
       </a>
     </div>
   </div>
