@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import FestivalTopBox from "./tmail/FestivalTopBox.vue";
-import NavTopSite from "./tmail/NavTopSite.vue";
-import HeaderSearchBox from "./tmail/HeaderSearchBox.vue";
-import ContentBox from "./tmail/ContentBox.vue";
-import FooterBox from "./tmail/FooterBox.vue";
+import FestivalTopBox from "./tmall/FestivalTopBox.vue";
+import NavTopSite from "./tmall/NavTopSite.vue";
+import HeaderSearchBox from "./tmall/HeaderSearchBox.vue";
+import ContentBox from "./tmall/ContentBox.vue";
+import FooterBox from "./tmall/FooterBox.vue";
 export default {
   components: {
     FestivalTopBox,

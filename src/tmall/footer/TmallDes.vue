@@ -1,6 +1,6 @@
 // 天猫相关的介绍
 <template>
-  <div id="tmailDesBox">
+  <div id="tmallDesBox">
     <div class="desItemBox" v-for="desItem in desItems">
       <div class="desTitle">{{ desItem.title }}</div>
 
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#tmailDesBox {
+#tmallDesBox {
   width: 1190px;
   padding-top: 22px;
   height: 190px;

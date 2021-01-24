@@ -1,5 +1,5 @@
 <template>
-  <div id="tmailEnsure">
+  <div id="tmallEnsure">
     <div>
       <a :href="'#' + i" target="_blank" v-for="i in 4"> </a>
     </div>
@@ -11,7 +11,7 @@ export default {};
 </script>
 
 <style lang="stylus" scoped>
-#tmailEnsure {
+#tmallEnsure {
   width: 1190px;
   height: 100px;
   background: url('//img.alicdn.com/tfs/TB14dANRXXXXXbdXXXXXXXXXXXX-1190-100.jpg') no-repeat;
