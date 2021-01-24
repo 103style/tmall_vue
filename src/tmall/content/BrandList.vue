@@ -33,7 +33,7 @@
 export default {
   data() {
     return {
-      freshIcon: "\u3459",
+      freshIcon: "\ue69b",
       brands: [
         {
           bgUrl:
@@ -270,6 +270,7 @@ export default {
         // transition 写在hover中实现鼠标移动上来的时候有动画
         transition: all 0.3s ease-out;
         transform: rotate(360deg);
+        color: #fff;
       }
 
       .changeBtn {
@@ -300,9 +301,9 @@ export default {
           top: 50%;
           margin-left: -20px;
           margin-top: -30px;
-          font-size: 30px;
+          font-size: 26px;
           text-align: center;
-          line-height: 38px;
+          line-height: 44px;
           border-radius: 20px;
         }
       }

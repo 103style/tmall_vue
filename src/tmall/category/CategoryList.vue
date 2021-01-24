@@ -9,7 +9,7 @@
         @mouseout="removeHover"
       >
         <span
-          class="iconfont"
+          class="iconfont iconfontSpan"
           :style="changeStyle(itemIndex, categoryDetails[itemIndex].hoverColor)"
           >{{ categoryItem.iconDes }}</span
         >
@@ -78,7 +78,7 @@ export default {
           titles: ["零食", "茶酒", "进口食品"],
           iconDes: "\u3455",
         },
-        { titles: ["生鲜水果"], iconDes: "\u3485" },
+        { titles: ["生鲜水果"], iconDes: "\ue632" },
         { titles: ["大家电", "生活电器"], iconDes: "\u3454" },
         { titles: ["家具建材"], iconDes: "\u3453" },
         { titles: ["汽车", "配件", "用品"], iconDes: "\u345d" },
@@ -2510,6 +2510,11 @@ export default {
     .category_list_item {
       height: 31.2px;
       color: #fff;
+
+      .iconfontSpan {
+        position: relative;
+        top: 1px;
+      }
 
       a {
         height: 31px;

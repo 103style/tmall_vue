@@ -10,6 +10,7 @@
           <span class="hot_word_title">
             {{ hotWordItem.title }}
           </span>
+          <span class="iconfont iconfontSpan">&#xf0116;</span>
         </div>
         <div class="line_items">
           <a
@@ -104,6 +105,14 @@ export default {
       left: 0px;
       float: left;
 
+      .iconfontSpan {
+        position: absolute;
+        font-size: 12px;
+        line-height: 22px;
+        top: 2px;
+        right: -18px;
+      }
+
       .hot_word_title {
         display: inline-block;
         width: 60px;
@@ -113,14 +122,13 @@ export default {
       }
     }
 
-    .line_title:after {
-      content: '>';
-      position: absolute;
-      left: 60px;
-      width: 14px;
-      text-align: center;
-    }
-
+    // .line_title:after {
+    // content: '>';
+    // position: absolute;
+    // left: 60px;
+    // width: 14px;
+    // text-align: center;
+    // }
     .line_items {
       width: 493px;
       float: left;

@@ -20,7 +20,7 @@
         </li>
         <li class="item">
           <a href="#">
-            <span class="iconfont iconfontspan">&#xe61d;</span>
+            <span class="iconfont iconfontspan">&#xf01d1;</span>
             购物车
           </a>
         </li>
@@ -37,7 +37,7 @@
         <li class="item split"></li>
         <li class="item">
           <a href="#">
-            <span class="iconfont iconfontspan">&#xe622;</span>
+            <span class="iconfont iconfontspan">&#x3448;</span>
             手机版
           </a>
           <div class="memuList phoneQrBox">
@@ -67,7 +67,7 @@
         </li>
         <li class="item sitemap">
           <a href="#">
-            <span class="iconfont iconfontspan">&#58911;</span>
+            <span class="iconfont iconfontspan">&#x344a;</span>
             网站导航
           </a>
           <div class="memuList websiteNav">
@@ -477,7 +477,6 @@ export default {
       .iconfontspan {
         color: #FF0036;
         margin-right: 1px;
-        font-weight: bold;
       }
 
       .item:hover .memuList {

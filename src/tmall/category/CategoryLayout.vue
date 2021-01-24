@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       showFestival: FestivalTopBox.data().showFestival,
-      selectIndex: 0,
+      selectIndex: 1,
       categoryTitle: "商品分类",
       festivalTitle: "年货节",
       logoSrc:
@@ -65,9 +65,9 @@ export default {
         { title: "品质家电", iconDes: "\u3454" },
         { title: "新年新家", iconDes: "\u3453" },
         { title: "新年购车", iconDes: "\u345d" },
-        { title: "全球年货", iconDes: "\u3453" },
+        { title: "全球年货", iconDes: "\ue611" },
         { title: "苏宁爆款", iconDes: "\u3457" },
-        { title: "天猫超市", iconDes: "\u3453" },
+        { title: "天猫超市", iconDes: "\ue602" },
       ],
     };
   },

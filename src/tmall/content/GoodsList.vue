@@ -33,7 +33,7 @@
 export default {
   data() {
     return {
-      guessIcon: "\u3459",
+      guessIcon: "\ue633",
       goodsData: [
         {
           cover:
