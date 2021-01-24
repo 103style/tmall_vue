@@ -2,16 +2,19 @@
   <div id="footerBox">
     <TmallEnsure />
     <TmallDes />
+    <TmallCopyright />
   </div>
 </template>
 
 <script>
 import TmallEnsure from "./footer/TmallEnsure.vue";
 import TmallDes from "./footer/TmallDes.vue";
+import TmallCopyright from "./footer/TmallCopyright.vue";
 export default {
   components: {
     TmallEnsure,
     TmallDes,
+    TmallCopyright,
   },
 };
 </script>
