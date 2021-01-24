@@ -4,7 +4,11 @@
       <div class="navFloorWrapper">
         <div class="floorLinkLayout headerNav">导航</div>
         <div class="floorList">
-          <a href="#" v-for="floorItem in floorList" class="floorLinkLayout">
+          <a
+            :href="'#' + floorItem"
+            v-for="floorItem in floorList"
+            class="floorLinkLayout"
+          >
             <div class="floorLink">
               {{ floorItem }}
             </div>

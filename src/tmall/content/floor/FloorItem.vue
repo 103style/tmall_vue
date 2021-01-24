@@ -1,5 +1,5 @@
 <template>
-  <div id="floorItem">
+  <div class="floorItem" :id="floorItemData.id">
     <!-- 广告栏 -->
     <div class="floorAdBox" v-if="floorItemData.adUrl">
       <a href="#" target="_blank">
