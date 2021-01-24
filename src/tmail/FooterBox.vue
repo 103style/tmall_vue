@@ -1,14 +1,17 @@
 <template>
   <div id="footerBox">
     <TmailEnsure />
+    <TmailDes />
   </div>
 </template>
 
 <script>
 import TmailEnsure from "./footer/TmailEnsure.vue";
+import TmailDes from "./footer/TmailDes.vue";
 export default {
   components: {
     TmailEnsure,
+    TmailDes,
   },
 };
 </script>
