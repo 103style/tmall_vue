@@ -6,13 +6,14 @@
         <input
           type="text"
           class="searchInput"
-          id="mq"
+          id="smq"
           v-on:focus="searchFocused"
           v-on:input="onSearchInput"
           v-on:blur="loseFocus"
+          autofocus="autofocus"
         />
         <label
-          for="mq"
+          for="smq"
           v-if="!inputing"
           v-bind:class="['searchLable', inputFoucsed ? 'searchLableLose' : '']"
         >
