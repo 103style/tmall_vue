@@ -60,6 +60,12 @@ npm 版本 `6.14.11`
 
 ---
 
+### Contact Me
+![contact me](https://github.com/103style/tmall_vue/blob/master/wechat.jpg)
+
+
+---
+
 ## 样式参考
 * [tmall](https://www.tmall.com/)
 
