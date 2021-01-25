@@ -14,7 +14,7 @@ export default {
     return {
       floorItems: [
         {
-          id: "天猫超市",
+          id:'floor-tmcs',
           imageUrl:
             "//img.alicdn.com/tfs/TB1Q67hXPihSKJjy0FeXXbJtpXa-428-50.png",
           bigBanner: [
@@ -84,7 +84,7 @@ export default {
           },
         },
         {
-          id: "天猫国际",
+          id:'floor-tmgj',
           imageUrl:
             "//img.alicdn.com/tfs/TB1R.slXGagSKJjy0FgXXcRqFXa-428-50.png",
           bigBanner: [
@@ -161,7 +161,7 @@ export default {
           adUrl: "//aecpm.alicdn.com/simba/img/TB1_EfIJFXXXXXOXFXXSutbFXXX.jpg",
         },
         {
-          id: "美丽人生",
+          id:'floor-mlrs',
           title: "美丽人生",
           subTitle: "FASHION & BEAUTY",
           bigBanner: [
@@ -233,7 +233,7 @@ export default {
           },
         },
         {
-          id: "潮电酷玩",
+          id:'floor-cdkw',
           title: "潮电酷玩",
           subTitle: "ELECTRONICS",
           bigBanner: [
@@ -307,7 +307,7 @@ export default {
           adUrl: "//aecpm.alicdn.com/simba/img/TB1tELGJFXXXXaLXFXXSutbFXXX.jpg",
         },
         {
-          id: "居家生活",
+          id:'floor-jjsh',
           title: "居家生活",
           subTitle: "GROCERY & HEALTH",
           bigBanner: [
@@ -379,7 +379,7 @@ export default {
           },
         },
         {
-          id: "打造爱巢",
+          id:'floor-dzac',
           title: "打造爱巢",
           subTitle: "HOME",
           bigBanner: [
@@ -454,7 +454,7 @@ export default {
           adUrl: "//aecpm.alicdn.com/simba/img/TB1x8DCJFXXXXc7XFXXSutbFXXX.jpg",
         },
         {
-          id: "户外出行",
+          id:'floor-hwcx',
           title: "户外出行",
           subTitle: "OUTDOORS & AUTOMOTIVE",
           bigBanner: [

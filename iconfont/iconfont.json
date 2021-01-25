@@ -167,6 +167,13 @@
       "unicode_decimal": 58881
     },
     {
+      "icon_id": "10480798",
+      "name": "向上",
+      "font_class": "down2",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    },
+    {
       "icon_id": "11608249",
       "name": "Tmall",
       "font_class": "tmall1",

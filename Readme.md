@@ -17,6 +17,8 @@
 
 
 ## 参考
+* [HTML DOM Element 对象](https://www.w3school.com.cn/jsref/dom_obj_all.asp)
+* [HTML 事件属性](https://www.w3school.com.cn/tags/html_ref_eventattributes.asp)
 * [Vue Style Guide](https://vuejs.org/v2/style-guide/index.html)
 * [vue-loader](https://vue-loader.vuejs.org/zh/)
 * [webpack-dev-server](https://webpack.docschina.org/configuration/dev-server/)

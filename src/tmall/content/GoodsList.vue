@@ -1,6 +1,6 @@
 // 猜你喜欢商品列表
 <template>
-  <div id="goodListBox">
+  <div id="floor-cnxh" class="goodListBox">
     <h2 class="goodLisTitleBox">
       <span class="goodLisTitle">
         <span class="iconfont guesssIcon">{{ guessIcon }}</span>
@@ -648,7 +648,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#goodListBox {
+.goodListBox {
   padding-right: 30px;
   width: 1230px;
   margin: 30px auto 0;

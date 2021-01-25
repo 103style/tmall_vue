@@ -1,5 +1,5 @@
 <template>
-  <div id="fixedSearchBox">
+  <div class="fixedSearchBox" :class="{ showFixedBox: showFixedSearchBox }">
     <div class="searchBox">
       <div class="logoBox">
         <span class="iconfont logoEN">&#xe601;</span
@@ -45,6 +45,7 @@ export default {
     return {
       inputFoucsed: false,
       inputing: false,
+      showFixedSearchBox: false,
     };
   },
   methods: {
@@ -59,12 +60,27 @@ export default {
       this.inputing = val.length != 0;
       this.inputFoucsed = val.length != 0;
     },
+    handleScroll() {
+      let y;
+      if (window.pageXOffset) {
+        y = window.pageYOffset;
+      } else {
+        y = document.body.scrollTop + document.documentElement.scrollTop;
+      }
+      let target = document.querySelector("#sliderbox");
+      let threshold = target.offsetHeight + target.offsetParent.offsetTop;
+      this.showFixedSearchBox = y > threshold;
+    },
+  },
+  mounted() {
+    // 监听滚动事件，然后用handleScroll这个方法进行相应的处理
+    window.addEventListener("scroll", this.handleScroll);
   },
 };
 </script>
 
 <style lang="stylus" scoped>
-#fixedSearchBox {
+.fixedSearchBox {
   overflow: hidden;
   width: 100%;
   position: fixed;
@@ -198,5 +214,9 @@ export default {
       }
     }
   }
+}
+
+.showFixedBox {
+  top: 0;
 }
 </style>
