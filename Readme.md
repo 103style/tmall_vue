@@ -1,6 +1,16 @@
 # Tmall Web
 
 ## 运行项目
+npm 版本 `6.14.11`
+
+[npm install and config ](https://github.com/103style/AndroidDevLearnWeb/blob/master/install.md)
+
+设置依赖库的下载地址：
+```
+> npm config set registry "https://registry.npm.taobao.org/"
+```
+
+运行项目：
 ```
 > git clone https://github.com/103style/tmall_vue.git
 > cd tmall_vue
@@ -18,15 +28,25 @@
 ---
 
 ## Preview
-![preview_top.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_top.gif)
+* 顶部菜单
+   
+  ![preview_top.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_top.gif)
 
-![preview_search.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_search.gif)
+* 搜索框
+  
+  ![preview_search.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_search.gif)
 
-![preview_category_slider.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_category_slider.gif)
+* 分类栏 和 轮播图
+  
+  ![preview_category_slider.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_category_slider.gif)
 
-![preview_floor.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_floor.gif)
+* 相关推荐种类菜单
+  
+  ![preview_floor.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_floor.gif)
 
-![preview_bottom.jpg](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_bottom.jpg)
+* 底部申明
+  
+  ![preview_bottom.jpg](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_bottom.jpg)
 
 
 ---
