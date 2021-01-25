@@ -17,6 +17,20 @@
 
 ---
 
+## Preview
+![preview_top.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_top.gif)
+
+![preview_search.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_search.gif)
+
+![preview_category_slider.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_category_slider.gif)
+
+![preview_floor.gif](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_floor.gif)
+
+![preview_bottom.jpg](https://github.com/103style/tmall_vue/blob/master/screenshot/preview_bottom.jpg)
+
+
+---
+
 ## 样式参考
 * [tmall](https://www.tmall.com/)
 
