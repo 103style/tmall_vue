@@ -1,6 +1,6 @@
 # Tmall Web
 
-基于 `vue 2.6.12` 实现 `tmall` 首页， 试下数据和界面分离。
+基于 `vue 2.6.12` 实现 `tmall` 首页， 实现数据和界面分离。
 
 > [纯 html+css 实现的 tmall 首页， 点我](https://github.com/103style/AndroidDevLearnWeb/tree/master/tmall)
 
